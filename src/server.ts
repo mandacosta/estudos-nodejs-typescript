@@ -1,18 +1,14 @@
 import fastify from 'fastify'
-import { knex } from './database'
-import crypto from 'node:crypto'
+import { env } from './env'
+import { transactionRoutes } from './routes/transactions'
 
 const app = fastify()
 
-app.get('/', async () => {
-  const transaction = await knex('transactions').select('*')
-
-  return transaction
-})
+app.register(transactionRoutes)
 
 app
   .listen({
-    port: 3000,
+    port: env.PORT,
   })
   .then(() => {
     console.log('HTTP Server running on Port 3000!')
