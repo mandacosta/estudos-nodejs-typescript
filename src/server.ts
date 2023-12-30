@@ -16,5 +16,5 @@ app
     port: env.PORT,
   })
   .then(() => {
-    console.log('HTTP Server running on Port 3000!')
+    console.log(`Rodando na porta ${env.PORT}!`)
   })
