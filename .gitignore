@@ -1,3 +1,8 @@
+# Deploy Build
+build
+
+db/*.db
+
 # Logs
 logs
 *.log
