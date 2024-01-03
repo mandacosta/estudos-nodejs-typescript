@@ -1,7 +1,8 @@
 # Deploy Build
 build
 
-db/*.db
+db/test.db
+db/app.db
 
 # Logs
 logs
